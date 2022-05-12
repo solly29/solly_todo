@@ -24,10 +24,10 @@ class MainTodoItemAdapter: RecyclerView.Adapter<MainTodoItemAdapter.MainTodoItem
     }
 
     override fun onBindViewHolder(holder: MainTodoItemViewHolder, position: Int) {
-        holder.onBind(list[position % list.size])
+        holder.onBind(list[position])
     }
 
     override fun getItemCount(): Int {
-        return Int.MAX_VALUE
+        return list.size
     }
 }
