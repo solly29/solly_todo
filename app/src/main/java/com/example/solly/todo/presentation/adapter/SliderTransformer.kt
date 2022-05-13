@@ -39,7 +39,7 @@ class SliderTransformer(private val offscreenPageLimit: Int) : ViewPager2.PageTr
             val alphaFactor = -ALPHA_FACTOR * position + DEFAULT_ALPHA
 
             when {
-                position <= 0f -> { // 드래해서 왼쪽으로 빠지는 페이지와 중앙으로 들어오는 페이지
+                position <= 0f -> { // 드래그해서 왼쪽으로 빠지는 페이지와 중앙으로 들어오는 페이지
                     translationX = DEFAULT_TRANSLATION_X
                     scaleX = DEFAULT_SCALE
                     scaleY = DEFAULT_SCALE
