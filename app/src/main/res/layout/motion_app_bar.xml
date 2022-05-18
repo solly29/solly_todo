@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.solly.todo.presentation.view.CollapsibleToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
+    android:minHeight="100dp"
+    android:fitsSystemWindows="false"
+    app:layoutDescription="@xml/scene_02">
+
+    <Button
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="111"
+        android:transformPivotX="200dp"/>
+
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1번"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"/>
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2번"
+        android:transformPivotX="100dp"
+        android:transformPivotY="0dp"/>
+
+</com.example.solly.todo.presentation.view.CollapsibleToolbar>

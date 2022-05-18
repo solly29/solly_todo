@@ -22,6 +22,8 @@
 
         <activity android:name=".presentation.view.AppBarTestActivity"
             android:exported="true"/>
+        <activity android:name=".presentation.view.MotionTest"
+            android:exported="true"/>
 
         <activity android:name=".presentation.view.IntroActivity"
             android:exported="true">
