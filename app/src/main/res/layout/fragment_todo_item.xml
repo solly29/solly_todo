@@ -8,15 +8,26 @@
         android:layout_height="match_parent"
         app:cardCornerRadius="30dp"
         app:cardElevation="0dp"
-        android:background="@android:color/transparent">
+        android:backgroundTint="#ADE6CD">
 
-        <TextView
-            android:id="@+id/textView_todo_item"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="#ADE6CD"
-            android:text="qwqwqw"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_todo_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="qwqwqw"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="dad"/>
+
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
