@@ -8,7 +8,7 @@ import com.example.solly.todo.presentation.base.BaseActivity
 import com.example.solly.todo.presentation.base.BaseViewModel
 import com.example.solly.todo.presentation.ext.showIntent
 
-class IntroActivity: BaseActivity<BaseViewModel, ActivityIntroBinding>() {
+class IntroActivity : BaseActivity<BaseViewModel, ActivityIntroBinding>() {
     override val layoutId: Int
         get() = R.layout.activity_intro
     override val viewModel: BaseViewModel = BaseViewModel()
