@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@id/button_appbar" />
+
+<!--        <KeyFrameSet>-->
+
+<!--            <KeyAttribute-->
+<!--                motion:framePosition="1"-->
+<!--                motion:transformPivotTarget="@id/linear_count">-->
+
+<!--                <CustomAttribute-->
+<!--                    motion:attributeName="visibility"-->
+<!--                    motion:customIntegerValue="0"/>-->
+
+<!--            </KeyAttribute>-->
+
+<!--        </KeyFrameSet>-->
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@id/appBar_main"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:id="@id/text_appbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:id="@id/textView_card_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            motion:layout_constraintTop_toBottomOf="@+id/button_appbar"
+            motion:layout_constraintStart_toStartOf="parent"/>
+
+        <Constraint
+            android:id="@id/textView_todo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            motion:layout_constraintTop_toBottomOf="@+id/textView_card_count"
+            motion:layout_constraintStart_toStartOf="parent"/>
+
+        <Constraint
+            android:id="@id/linear_count"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toBottomOf="@+id/text_appbar_title"
+            motion:layout_constraintStart_toStartOf="parent"/>
+
+        <Constraint
+            android:id="@id/linear_card_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            motion:layout_constraintTop_toBottomOf="@+id/linear_count"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@id/appBar_main"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:id="@id/text_appbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/button_appbar"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"/>
+
+        <Constraint
+            android:id="@id/textView_card_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            motion:layout_constraintTop_toBottomOf="@+id/button_appbar"
+            motion:layout_constraintStart_toStartOf="parent"/>
+
+        <Constraint
+            android:id="@id/textView_todo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            motion:layout_constraintTop_toBottomOf="@+id/textView_card_count"
+            motion:layout_constraintStart_toStartOf="parent"/>
+
+        <Constraint
+            android:id="@id/linear_count"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@+id/text_appbar_title"
+            motion:layout_constraintStart_toStartOf="parent"/>
+
+        <Constraint
+            android:id="@id/linear_card_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@+id/linear_count"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+    </ConstraintSet>
+
+</MotionScene>

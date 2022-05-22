@@ -4,24 +4,15 @@
 
     <Transition
         motion:constraintSetEnd="@id/end_back"
-        motion:constraintSetStart="@id/start_back">
+        motion:constraintSetStart="@id/start_back"
+        motion:duration="1000"
+        >
 
-<!--        <OnClick-->
-<!--            motion:clickAction="toggle"-->
-<!--            motion:targetId="@id/button_toolbar" />-->
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@id/button_toolbar" />
 
-    </Transition>
-
-    <Transition
-        motion:constraintSetStart="@+id/start"
-        motion:constraintSetEnd="@+id/end"
-        motion:duration="1000">
-
-<!--        <OnClick-->
-<!--            motion:clickAction="toggle"-->
-<!--            motion:targetId="@id/button_toolbar" />-->
-
-        <KeyFrameSet>
+        <!--<KeyFrameSet>
 
             <KeyPosition
                 motion:framePosition="80"
@@ -60,46 +51,27 @@
                 motion:keyPositionType="pathRelative"
                 motion:percentX="1.3" />
 
-        </KeyFrameSet>
+        </KeyFrameSet>-->
 
     </Transition>
 
-    <ConstraintSet android:id="@+id/start_back"
-        motion:deriveConstraintsFrom="@id/start">
+    <ConstraintSet android:id="@+id/start_back">
 
         <Constraint
             android:id="@id/appbar_menu"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            motion:layout_constraintTop_toBottomOf="@+id/appber_test"
-            motion:layout_constraintBottom_toBottomOf="@+id/appber_test"
+            android:layout_height="0.1dp"
+            motion:layout_constraintTop_toBottomOf="@+id/appBar_main"
+            motion:layout_constraintBottom_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"/>
-
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/end_back"
-        motion:deriveConstraintsFrom="@id/end">
-
-        <Constraint
-            android:id="@id/appbar_menu"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            motion:layout_constraintTop_toBottomOf="@+id/appber_test"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintBottom_toBottomOf="@+id/button_6"/>
-
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/start">
 
         <Constraint
             android:id="@id/button_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            motion:layout_constraintTop_toTopOf="@+id/appber_test"
-            motion:layout_constraintBottom_toBottomOf="@+id/appber_test"
+            motion:layout_constraintTop_toTopOf="@+id/appBar_main"
+            motion:layout_constraintBottom_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toStartOf="@+id/button_2"/>
 
@@ -107,8 +79,8 @@
             android:id="@id/button_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            motion:layout_constraintTop_toTopOf="@+id/appber_test"
-            motion:layout_constraintBottom_toBottomOf="@+id/appber_test"
+            motion:layout_constraintTop_toTopOf="@+id/appBar_main"
+            motion:layout_constraintBottom_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toEndOf="@+id/button_1"
             motion:layout_constraintEnd_toStartOf="@+id/button_3"/>
 
@@ -125,8 +97,8 @@
             android:id="@id/button_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            motion:layout_constraintTop_toTopOf="@+id/appber_test"
-            motion:layout_constraintBottom_toBottomOf="@+id/appber_test"
+            motion:layout_constraintTop_toTopOf="@+id/appBar_main"
+            motion:layout_constraintBottom_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toStartOf="@+id/button_5"/>
 
@@ -134,8 +106,8 @@
             android:id="@id/button_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            motion:layout_constraintTop_toTopOf="@+id/appber_test"
-            motion:layout_constraintBottom_toBottomOf="@+id/appber_test"
+            motion:layout_constraintTop_toTopOf="@+id/appBar_main"
+            motion:layout_constraintBottom_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toEndOf="@+id/button_4"
             motion:layout_constraintEnd_toStartOf="@+id/button_6"/>
 
@@ -143,23 +115,30 @@
             android:id="@id/button_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            motion:layout_constraintTop_toTopOf="@+id/appber_test"
-            motion:layout_constraintBottom_toBottomOf="@+id/appber_test"
+            motion:layout_constraintTop_toTopOf="@+id/appBar_main"
+            motion:layout_constraintBottom_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toEndOf="@+id/button_5"
             motion:layout_constraintEnd_toEndOf="parent"/>
 
-
     </ConstraintSet>
 
-    <ConstraintSet
-        android:id="@+id/end">
+    <ConstraintSet android:id="@+id/end_back">
+
+        <Constraint
+            android:id="@id/appbar_menu"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            motion:layout_constraintTop_toBottomOf="@+id/appBar_main"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/button_6"/>
 
         <Constraint
             android:id="@id/button_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            motion:layout_constraintTop_toBottomOf="@+id/appber_test"
+            motion:layout_constraintTop_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toStartOf="@+id/button_2"/>
 
@@ -168,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            motion:layout_constraintTop_toBottomOf="@+id/appber_test"
+            motion:layout_constraintTop_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toEndOf="@+id/button_1"
             motion:layout_constraintEnd_toStartOf="@+id/button_3"/>
 
@@ -177,7 +156,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            motion:layout_constraintTop_toBottomOf="@+id/appber_test"
+            motion:layout_constraintTop_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toEndOf="@+id/button_2"
             motion:layout_constraintEnd_toEndOf="parent"/>
 

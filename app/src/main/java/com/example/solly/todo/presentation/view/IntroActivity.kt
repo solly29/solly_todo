@@ -26,7 +26,7 @@ class IntroActivity : BaseActivity<BaseViewModel, ActivityIntroBinding>() {
             override fun onAnimationStart(p0: Animator?) {}
 
             override fun onAnimationEnd(p0: Animator?) {
-                this@IntroActivity.showIntent(AppBarTestActivity::class.java) {
+                this@IntroActivity.showIntent(MainActivity::class.java) {
                     addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 }

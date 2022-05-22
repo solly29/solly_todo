@@ -28,17 +28,17 @@ class AppBarTestActivity: BaseActivity<BaseViewModel, ActivityAppbarTest3Binding
 
     override fun initEvent() {
 
-        with(binding) {
-            buttonToolbar.setOnClickListener {
-                if(!isClick) {
-                    motionTest.transitionToEnd()
-                } else {
-                    motionTest.transitionToStart()
-                }
-                isClick = !isClick
-
-            }
-        }
+//        with(binding) {
+//            buttonToolbar.setOnClickListener {
+//                if(!isClick) {
+//                    motionTest.transitionToEnd()
+//                } else {
+//                    motionTest.transitionToStart()
+//                }
+//                isClick = !isClick
+//
+//            }
+//        }
 //        with(binding) {
 //            buttonToolBarMenu.setOnClickListener {
 //                val tv = TypedValue()

@@ -9,6 +9,7 @@ import android.util.DisplayMetrics
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.setPadding
 import androidx.core.view.updatePadding
@@ -94,6 +95,10 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
                 } else {
                     click(50, 0, false)
                 }
+            }
+
+            linearCompleteCount.setOnClickListener {
+                Toast.makeText(this@MainActivity, "clicke", Toast.LENGTH_SHORT).show()
             }
 //            viewPagerMainTodo.setOnClickListener {
 //                val animator = ValueAnimator.ofInt(viewPagerMainTodo.paddingBottom, 0)
