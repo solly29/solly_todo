@@ -2,6 +2,7 @@ package com.example.solly.todo.presentation.view
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -37,6 +38,10 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
     private var isCardChange: Boolean = false
     private var cardPosition = 0
 
+    private var isClickMenu = false
+
+    private lateinit var menuAnimation: AnimationDrawable
+
     private val click = { paddingStart: Int, paddingEnd: Int, enable: Boolean ->
         if(binding.viewPagerMainTodo.isUserInputEnabled != enable) {
             val animator = ValueAnimator.ofInt(paddingStart, paddingEnd)
@@ -63,6 +68,11 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
     }
 
     override fun initStartView() {
+//        binding.buttonAppbar.apply {
+//            setBackgroundResource(R.drawable.menu_animation)
+//            menuAnimation = background as AnimationDrawable
+//        }
+
         binding.viewPagerMainTodo.apply {
             adapter = MainTodoItemAdapter(click)
             offscreenPageLimit = 1
@@ -99,6 +109,24 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
 
             linearCompleteCount.setOnClickListener {
                 Toast.makeText(this@MainActivity, "clicke", Toast.LENGTH_SHORT).show()
+            }
+
+            buttonAppbar.setOnClickListener {
+                if(!isClickMenu) {
+                    motionLayoutAppbar.transitionToEnd()
+                } else {
+                    motionLayoutAppbar.transitionToStart()
+                }
+                isClickMenu = !isClickMenu
+            }
+
+            floatingCloseButton.setOnClickListener {
+                if(!isClickMenu) {
+                    motionLayoutAppbar.transitionToEnd()
+                } else {
+                    motionLayoutAppbar.transitionToStart()
+                }
+                isClickMenu = !isClickMenu
             }
 //            viewPagerMainTodo.setOnClickListener {
 //                val animator = ValueAnimator.ofInt(viewPagerMainTodo.paddingBottom, 0)

@@ -5,11 +5,11 @@
     <Transition
         motion:constraintSetEnd="@id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000">
+        motion:duration="800">
 
-        <OnClick
-            motion:clickAction="toggle"
-            motion:targetId="@id/button_appbar" />
+<!--        <OnClick-->
+<!--            motion:clickAction="toggle"-->
+<!--            motion:targetId="@id/button_appbar" />-->
 
 <!--        <KeyFrameSet>-->
 
@@ -43,7 +43,8 @@
             android:layout_height="wrap_content"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintEnd_toEndOf="parent"/>
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="@+id/appBar_main"/>
 
         <Constraint
             android:id="@id/textView_card_count"
@@ -66,15 +67,30 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:visibility="invisible"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             motion:layout_constraintTop_toBottomOf="@+id/text_appbar_title"
             motion:layout_constraintStart_toStartOf="parent"/>
 
         <Constraint
-            android:id="@id/linear_card_list"
+            android:id="@id/linear_menu"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             motion:layout_constraintTop_toBottomOf="@+id/linear_count"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:id="@+id/floating_close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            motion:layout_constraintTop_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"/>
 
@@ -85,7 +101,7 @@
         <Constraint
             android:id="@id/appBar_main"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"/>
@@ -96,7 +112,9 @@
             android:layout_height="wrap_content"
             motion:layout_constraintTop_toBottomOf="@+id/button_appbar"
             motion:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="10dp"/>
 
         <Constraint
             android:id="@id/textView_card_count"
@@ -120,15 +138,30 @@
             android:layout_height="50dp"
             android:orientation="vertical"
             android:visibility="visible"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             motion:layout_constraintTop_toBottomOf="@+id/text_appbar_title"
             motion:layout_constraintStart_toStartOf="parent"/>
 
         <Constraint
-            android:id="@id/linear_card_list"
+            android:id="@id/linear_menu"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             motion:layout_constraintTop_toBottomOf="@+id/linear_count"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:id="@+id/floating_close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            motion:layout_constraintTop_toBottomOf="@+id/appBar_main"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"/>
 
