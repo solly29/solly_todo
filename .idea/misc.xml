@@ -23,6 +23,7 @@
         <entry key="app/src/main/res/layout/activity_appbar_test3.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/layout/activity_intro.xml" value="0.22708333333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_todo_add_item.xml" value="0.23489583333333333" />
         <entry key="app/src/main/res/layout/fragment_todo_item.xml" value="0.23489583333333333" />
         <entry key="app/src/main/res/layout/item_main_todo_list.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/motion_app_bar.xml" value="0.1383684897918245" />
