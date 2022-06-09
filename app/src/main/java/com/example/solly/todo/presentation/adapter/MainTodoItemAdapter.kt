@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.solly.todo.R
 import com.example.solly.todo.databinding.FragmentTodoItemBinding
 
-class MainTodoItemAdapter(): RecyclerView.Adapter<MainTodoItemAdapter.MainTodoItemViewHolder>() {
+class MainTodoItemAdapter: RecyclerView.Adapter<MainTodoItemAdapter.MainTodoItemViewHolder>() {
 
     private val list = listOf("1번","2번","3번","4번")
 

@@ -17,6 +17,7 @@ import androidx.core.view.children
 import androidx.core.view.setPadding
 import androidx.core.view.updatePadding
 import androidx.core.view.updatePaddingRelative
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
@@ -24,6 +25,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.solly.todo.R
 import com.example.solly.todo.databinding.ActivityMainBinding
 import com.example.solly.todo.presentation.adapter.MainTodoItemAdapter
+import com.example.solly.todo.presentation.adapter.MainTodoReAdapter
 import com.example.solly.todo.presentation.adapter.SliderTransformer
 import com.example.solly.todo.presentation.adapter.SliderTransformerTest
 import com.example.solly.todo.presentation.base.BaseActivity
@@ -103,6 +105,9 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
                 }
             })
         }
+
+        binding.recyclerMainTodo.layoutManager = LinearLayoutManager(this)
+        binding.recyclerMainTodo.adapter = MainTodoReAdapter()
     }
 
     override fun initDataBinding() {
