@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.solly.todo.R
 import com.example.solly.todo.databinding.FragmentTodoAddItemBinding
 import com.example.solly.todo.databinding.FragmentTodoItemBinding
+import com.example.solly.todo.presentation.ext.showIntent
+import com.example.solly.todo.presentation.view.TodoEditActivity
 
 class MainTodoItemAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -26,6 +28,9 @@ class MainTodoItemAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     inner class MainTodoItemAddViewHolder(val item: FragmentTodoAddItemBinding): RecyclerView.ViewHolder(item.root) {
         fun onBind(data: String) {
+            item.cardviewAdd.setOnClickListener {
+                item.root.context.showIntent(TodoEditActivity::class.java)
+            }
         }
     }
 
