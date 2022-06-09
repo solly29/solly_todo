@@ -124,28 +124,28 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
 //                }
 //            }
 
-            linearCompleteCount.setOnClickListener {
+            mainToolBar.linearCompleteCount.setOnClickListener {
                 Toast.makeText(this@MainActivity, "clicke", Toast.LENGTH_SHORT).show()
             }
 
-            buttonAppbar.setOnClickListener {
+            mainToolBar.buttonAppbar.setOnClickListener {
                 if(!isClickMenu) {
-                    buttonAppbar.setImageResource(R.drawable.ic_baseline_close_24)
-                    motionLayoutAppbar.transitionToEnd()
+                    mainToolBar.buttonAppbar.setImageResource(R.drawable.ic_baseline_close_24)
+                    mainToolBar.motionLayoutAppbar.transitionToEnd()
                 } else {
-                    buttonAppbar.setImageResource(R.drawable.ic_baseline_menu_24)
-                    motionLayoutAppbar.transitionToStart()
+                    mainToolBar.buttonAppbar.setImageResource(R.drawable.ic_baseline_menu_24)
+                    mainToolBar.motionLayoutAppbar.transitionToStart()
                 }
                 isClickMenu = !isClickMenu
             }
 
-            floatingCloseButton.setOnClickListener {
+            mainToolBar.floatingCloseButton.setOnClickListener {
                 if(!isClickMenu) {
-                    buttonAppbar.setImageResource(R.drawable.ic_baseline_close_24)
-                    motionLayoutAppbar.transitionToEnd()
+                    mainToolBar.buttonAppbar.setImageResource(R.drawable.ic_baseline_close_24)
+                    mainToolBar.motionLayoutAppbar.transitionToEnd()
                 } else {
-                    buttonAppbar.setImageResource(R.drawable.ic_baseline_menu_24)
-                    motionLayoutAppbar.transitionToStart()
+                    mainToolBar.buttonAppbar.setImageResource(R.drawable.ic_baseline_menu_24)
+                    mainToolBar.motionLayoutAppbar.transitionToStart()
                 }
                 isClickMenu = !isClickMenu
             }
