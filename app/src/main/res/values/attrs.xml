@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomDatePicker">
+        <attr name="maxYear" format="integer"/>
+        <attr name="maxMonth" format="integer"/>
+        <attr name="maxDay" format="integer"/>
+
+        <attr name="minYear" format="integer"/>
+        <attr name="minMonth" format="integer"/>
+        <attr name="minDay" format="integer"/>
+    </declare-styleable>
+</resources>

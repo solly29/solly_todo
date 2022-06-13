@@ -90,6 +90,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linear_date_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -128,6 +129,34 @@
                 android:text="매년"/>
 
         </LinearLayout>
+
+        <!--<DatePicker
+            android:id="@+id/date_picker_todo_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            app:layout_constraintTop_toBottomOf="@+id/linear_date_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>-->
+
+        <com.example.solly.todo.presentation.view.CustomDatePicker
+            android:id="@+id/np_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/linear_date_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!--<TimePicker
+            android:id="@+id/time_picker_todo_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            app:layout_constraintTop_toBottomOf="@+id/date_picker_todo_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>-->
+
 
         <include
             android:id="@+id/toolbar_edit"
