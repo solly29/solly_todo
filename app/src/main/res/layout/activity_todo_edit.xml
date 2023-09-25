@@ -1,162 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_appbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="?android:actionBarSize"/>
 
-        <LinearLayout
-            android:id="@+id/linear_edit_text"
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nev_edit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_appbar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            android:layout_height="match_parent">
 
-            <com.google.android.material.textfield.TextInputLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:hintTextColor="@color/edit_border_color"
-                app:boxStrokeColor="@color/edit_border_color"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:layout_constraintTop_toTopOf="@+id/guideline_appbar"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                android:layout_height="0dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_appbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="?android:actionBarSize"/>
+
+                <LinearLayout
+                    android:id="@+id/linear_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textCursorDrawable="@drawable/text_input_edit_text_cursor"
-                    android:paddingStart="10dp"
-                    android:hint="카드 제목"/>
+                    android:orientation="vertical"
+                    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge"
+                    app:layout_constraintTop_toBottomOf="@+id/guideline_appbar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/edit_border_color"
+                        app:boxStrokeColor="@color/edit_border_color"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:layout_constraintTop_toTopOf="@+id/guideline_appbar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:hintTextColor="@color/edit_border_color"
-                app:boxStrokeColor="@color/edit_border_color"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:layout_constraintTop_toBottomOf="@+id/edit_text_card_title"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textCursorDrawable="@drawable/text_input_edit_text_cursor"
+                            android:paddingStart="10dp"
+                            android:hint="카드 제목"/>
 
-                <com.google.android.material.textfield.TextInputEditText
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/edit_border_color"
+                        app:boxStrokeColor="@color/edit_border_color"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:layout_constraintTop_toBottomOf="@+id/edit_text_card_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textCursorDrawable="@drawable/text_input_edit_text_cursor"
+                            android:paddingStart="10dp"
+                            android:hint="카드 설명"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/edit_border_color"
+                        app:boxStrokeColor="@color/edit_border_color"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:layout_constraintTop_toBottomOf="@+id/edit_text_card_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textCursorDrawable="@drawable/text_input_edit_text_cursor"
+                            android:paddingStart="10dp"
+                            android:hint="태그"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="반복"
+                        android:padding="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_date_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textCursorDrawable="@drawable/text_input_edit_text_cursor"
-                    android:paddingStart="10dp"
-                    android:hint="카드 설명"/>
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_edit_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="매일"/>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:hintTextColor="@color/edit_border_color"
-                app:boxStrokeColor="@color/edit_border_color"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:layout_constraintTop_toBottomOf="@+id/edit_text_card_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="매주"/>
 
-                <com.google.android.material.textfield.TextInputEditText
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="매월"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="매년"/>
+
+                </LinearLayout>
+
+                <com.example.solly.todo.presentation.view.CustomDatePicker
+                    android:id="@+id/np_test"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textCursorDrawable="@drawable/text_input_edit_text_cursor"
-                    android:paddingStart="10dp"
-                    android:hint="태그"/>
+                    app:layout_constraintTop_toBottomOf="@id/linear_date_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_edit_todo_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    tools:listitem="@layout/item_edit_todo_list"
+                    app:layout_constraintTop_toBottomOf="@id/np_test"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-        </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:id="@+id/linear_date_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/linear_edit_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="일자 지정"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="매일"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="매주"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="매월"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="매년"/>
-
-        </LinearLayout>
-
-        <!--<DatePicker
-            android:id="@+id/date_picker_todo_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:datePickerMode="spinner"
-            android:calendarViewShown="false"
-            app:layout_constraintTop_toBottomOf="@+id/linear_date_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>-->
-
-        <com.example.solly.todo.presentation.view.CustomDatePicker
-            android:id="@+id/np_test"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/linear_date_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <!--<TimePicker
-            android:id="@+id/time_picker_todo_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:timePickerMode="spinner"
-            app:layout_constraintTop_toBottomOf="@+id/date_picker_todo_edit"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>-->
-
+        </androidx.core.widget.NestedScrollView>
 
         <include
             android:id="@+id/toolbar_edit"

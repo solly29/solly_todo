@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:id="@+id/ll_add_todo_list"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        android:tint="@color/edit_border_color" />
+
+</LinearLayout>
+</layout>
